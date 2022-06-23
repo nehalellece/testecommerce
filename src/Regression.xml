@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- All TestCases -->
+<suite name="Suite1" verbose="1" >
+
+
+    <test name="Regression1">
+        <classes>
+            <class name="RegisterTest"></class>
+            <class name="LoginTest">
+                <methods>
+                    <include name="loginValidTest"/>
+                    <exclude name="loginInvalidTest"></exclude>
+                </methods>
+            </class>
+            <class name="PasswordTest">
+
+            </class>
+            <class name="HomePageTest">
+                <methods>
+                    <exclude name="filterByColor"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
